@@ -1,0 +1,373 @@
+#materials{
+  .triangle{
+    &__figure{
+      &_info{
+        @media (min-width: $lg) {
+          position: absolute;
+        }
+
+        &-title{
+          position: static;
+          text-align: center;
+          font-size: rem_size(16);
+          font-weight: 500;
+
+          @media (min-width: $lg) {
+            font-size: rem_size(12);
+            text-align: left;
+          }
+
+          @media (min-width: $xxl) {
+            font-size: rem_size(18);
+          }          
+        }
+
+        &-text{
+          text-align: center;
+          @media (min-width: $lg) {
+            text-align: left;
+          }
+          @media (min-width: $xl) {
+            font-size: rem_size(10);
+          }    
+        }
+      }
+    }
+  }
+}
+
+/*Блок с треугольниками*/
+.triangle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+/*Наложение уветов на фигуры*/
+  &__overlay{
+    &--light{
+      position: relative;
+      &:before{
+        @include triangle_overlay(#fff,0.4);
+      }
+    }
+
+    &--fiol{
+      position: relative;
+      &:before{
+        @include triangle_overlay(#804fc5,0.7);
+      }
+    }
+  }
+
+/*Стили для фигур лендинга Павильоны. Первая секция.*/
+/*Левая фигура*/
+    #triangle__figure_first {
+      height: 50%;
+
+      @media (min-width: $lg ) {
+        height: 100%;
+        z-index: 1;
+        left: 0;
+      }
+
+      .triangle{
+        &__figure{
+          &_info{
+            @media (min-width: $lg) {
+              margin-right: rem_size(15);
+              text-align: center;
+            }            
+          }
+        }
+      }
+
+      .section-text{
+        padding: rem_size(9) 0;
+        text-align: center;
+      }
+    }
+
+/*Верхняя фигура*/
+    #triangle__figure_second {
+      background-image: url(../img/designe-img.png);
+      @include background_set(cover, top);
+      width: 100%;
+
+      @media (min-width: $lg) {
+        background-position: top;
+        height: 20%;
+      } 
+
+      .triangle{
+        &__figure{
+          &_info{
+            &-title{
+              @media (min-width: $lg) {
+                top: 25%;
+                left: 30%;
+              }            
+            }
+          }
+        }
+      }
+    }
+
+/*Правая фигура*/
+    #triangle__figure_third {
+      background-image: url(../img/speed-img.png);
+      @include background_set(cover, bottom);
+
+      @media (min-width: $lg) {
+        background-position: right;
+        height: 20%;
+      }
+
+      .triangle{
+        &__figure{
+          &_info{
+            &-title{
+              @media (min-width: $lg) {
+                top: 48%;
+                left: 10%;
+              }            
+            }
+          }
+        }
+      }
+
+    }
+
+/*Нижняя фигура*/
+    #triangle__figure_fourth {
+      align-items: flex-start;
+      padding: 0;
+
+      @media (min-width: $lg) {
+        height: 50%;
+      }
+
+      .triangle{
+        &__figure{
+          &_info{
+            &-title{
+              @media (min-width: $lg) {
+                left: 47%;
+                top: 70%;
+              }  
+
+              @media (min-width: $xxl) {
+                left: 51%;
+              }  
+            }          
+          }
+        }
+      }
+    }
+
+/*Стили для фигур лендинга Павильоны. Вторая секция.*/
+  #triangle__material-1 {
+      @media (min-width: $lg) {
+        height: 100%;
+        z-index: 1;
+        left: 0;
+      }
+
+      .triangle{
+        &__figure{
+          &_info{
+            @media (min-width: $lg) {
+              left: 0;
+              top: 50%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  #triangle__material-2 {
+    background-image: url(../img/wood-1.png);
+      @media (min-width: $lg) {
+        @include background_set(contain,right);
+      }
+
+      .triangle{
+        &__figure{
+          &_info{
+            @media (min-width: $lg) {
+              top: 0;
+              left: 36%;
+            }
+          }
+        }
+      }
+  }
+  #triangle__material-3 {
+    background-image: url(../img/wood-2.png);
+
+    @media (min-width: $lg) {
+      @include background_set(cover,right);
+    }
+
+    .triangle{
+      &__figure{
+        &_info{
+          @media (min-width: $lg) {
+            bottom: calc(100% - 50vh);
+            left: 23%;
+          }
+        }
+      }
+    }
+  }
+  #triangle__material-4 {
+    background-image: url(../img/wood-3.png);
+
+    @media (min-width: $lg) {
+      @include background_set(cover,center);
+    }
+
+    .triangle{
+      &__figure{
+        &_info{
+          @media (min-width: $lg) {
+            bottom: 5%;
+          }
+        }
+      }
+    }
+  }
+
+  &__figure{
+    position: relative;
+    @include background_set(cover,center);
+    background-color: $light_color_font;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $lg) {
+      position: absolute;
+
+      &:nth-child(2) {
+        height: 50% !important;
+        clip-path: polygon(51% 100%, 0 0, 100% 0);
+        z-index: 5;
+        top: 0;
+        right: 5%;
+      }
+
+      &:nth-child(3) {
+        height: 100% !important;
+        z-index: 5;
+        clip-path: polygon(100% 110%, 100% -30%, 0 50%);
+        right: 0;
+        top: 0;
+      }
+
+      &:nth-child(4) {
+        height: 60% !important;
+        clip-path: polygon(63% -4%, 0% 110%, 100% 100%);
+        z-index: 4;
+        bottom: 0;
+        right: 5%;
+      }
+    }
+
+  
+      &_info{
+        z-index: 10;
+
+        &-title{
+          z-index: 1;
+          font-size: rem_size(18);
+          text-align: center;
+          margin: 0 auto;
+
+          @media (min-width: $lg) {
+            font-weight: bold;
+            font-size: rem_size(12);
+            position: absolute;
+            text-align: center;
+          }
+
+          @media (min-width: $xl) {
+              font-size: rem_size(15);
+              font-weight: 400;
+          }
+
+          @media (min-width: 1800px) {
+            font-size: rem_size(18);
+          }  
+
+          & strong{
+            display: block;
+            font-size: rem_size(22);
+            font-weight: 500;
+          }
+        }
+
+        &-text{
+          font-size: rem_size(11);
+          color: $dark_color_font;
+          display: flex;
+          align-items: center;
+          margin: rem_size(9) 0;
+          border-radius: 10px;
+
+          @media (min-width: 1800px) {
+            font-size: rem_size(13);
+          }            
+        }
+      }
+
+    &_additional{
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #triangle__figure_additional-1{
+      background-image: url(../img/material-img.png);
+      @include background_set(cover,unset);
+
+      @media (min-width: $lg) {
+        position: absolute;
+        @include background_set(cover,center);
+        width: 100%;
+        height: 100%;
+        -webkit-clip-path: polygon(0 0%, 90% 0%, 8% 150%, 0% 0%);
+        clip-path: polygon(0 0%, 90% 0%, 8% 150%, 0% 0%);
+      }
+
+      .triangle{
+        &__figure{
+          &_info{
+            &-title{
+              color: #fff;
+              @media (min-width: $lg) {
+                left: 20%;
+                top: 30vh;
+                transform: rotate(-55deg);
+              } 
+
+              @media (min-width: 1200px) {
+                top: 65%;
+                transform: rotate(-40deg);
+              }
+
+              @media (min-width: 1600px) {
+                top: 55%;
+                left: 30%;
+                transform: rotate(-40deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

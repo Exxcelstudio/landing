@@ -1,0 +1,40 @@
+
+/*Форма*/
+.modal-order .modal-order__text {
+  margin: 0.5rem 0 2rem 0;
+}
+
+/*Треугольные блоки*/
+.triangle .tip {
+  width: 90%;
+}
+
+/*Медиа запросы*/
+@media (min-width: 1500px) {
+  /*Изменяем высоту изображений и текста картчек*/
+  .cards .list-card__item-card .item-card__img {
+    height: 40%;
+  }
+
+  #cards .item-card__card-text {
+    height: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  /*Обсновные теги*/
+
+  section {
+    padding-bottom: 0;
+    background-size: cover;
+  }
+
+  .section__title {
+    text-align: left;
+  }
+
+  /*О компании*/
+  .company-number {
+    margin-bottom: 2rem;
+  }
+}

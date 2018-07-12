@@ -1,0 +1,30 @@
+.footer {
+  background-color: #dcdcdc;
+
+  &__side{
+  	&_title{
+		padding-top: rem_size(18);
+		margin: 0;
+		font-size: rem_size(14);
+  	}
+
+  	&_adress{
+  		font-size: rem_size(10);
+      margin: 0;
+  	}
+
+    &_email{
+      margin: 0;
+    }
+
+    &_phone{
+      margin: rem_size(5) 0;
+    }
+
+  	&_social-link{
+		font-size: rem_size(25);
+		color: $dark_color_font;
+		margin-right: rem_size(9);
+  	}
+  }
+}

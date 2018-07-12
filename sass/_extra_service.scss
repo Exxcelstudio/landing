@@ -1,0 +1,57 @@
+.extra-service{
+  	background-image: url(../img/bitmap.png);
+
+	&__credit{
+		background-color: $light_color_font;
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		position: relative;
+		margin: rem_size(27) 0;
+		padding: rem_size(18) rem_size(27);
+
+		&-item{
+			padding-left: 0; 
+
+			.section__title{
+				font-size: rem_size(16);
+				margin-bottom: rem_size(9);
+			}
+
+			@media (min-width: $lg) {
+				.section-text{
+				    max-width: 90%;
+				}
+			}
+		}
+
+		@media (min-width: $lg) {
+			background-image: url(../img/bank.png);
+			@include background_set(unset,right);
+		}
+	}
+
+	&__delivery{
+		margin-top: 10rem;
+		background-color: $light_color_font;
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+
+		.section__title{
+			font-size: rem_size(22);
+			margin-bottom: rem_size(9);
+		}
+
+		@media (min-width: $lg) {
+			.section-text{
+			    max-width: 90%;
+			}
+		}		
+
+
+		@media (min-width: $lg) {
+			background-color: transparent;
+		    box-shadow: none;
+		    border-radius: 0;
+		}
+	}
+}

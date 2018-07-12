@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+  </head>
+  <body>
+   <header class="header">
+		<div class="container">
+			<div class="row d-flex justify-content-between align-items-center">
+				<div class="col-lg-2 col-6 col-md-3">
+					<a href="index.html">
+						<img src="img/logo.png" alt="" class="header__logo">
+					</a>
+				</div>
+				<div class="col-lg-4 d-none d-md-block col-md-9">
+					<p class="header__about-text">Модульные и быстровозводимые <br>изделия в Краснодаре от производителя</p>
+				</div>
+				<div class="col-lg-4 d-none d-md-block col-md-6">
+					<div class="header__phone">
+						<p class="header__phone_number">+7 (988) 884 48 39</p>
+						<button class="header__phone_callback toggle_form">обратный звонок</button>
+					</div>
+				</div>
+				<div class="col-lg-1 col-6 offset-lg-1 col-md-3">
+					<div class="menu d-flex align-items-center justify-content-end toggle_menu">
+						<p class="menu__name">Меню</p>
+						<div class="menu__button d-flex flex-column justify-content-between">
+							<span class="menu__button_top"></span>
+							<span class="menu__button_center"></span>
+							<span class="menu__button_bottom"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+   </header>
+	<div class="menu-side">
+		<div id="main-menu" class="sidebar">
+			<div class="menu d-none align-items-center toggle_menu col-lg-1 justify-content-end justify-content-lg-center">
+				<p class="menu__name">Меню</p>
+				<div class="menu__button d-flex flex-column justify-content-between">
+					<span class="menu__button_top"></span>
+					<span class="menu__button_center"></span>
+					<span class="menu__button_bottom"></span>
+				</div>
+			</div>
+			<nav class="sidebar-menu menu--close col-12 col-lg-6 d-flex align-items-center">
+				<div class="sidebar-menu--position d-flex justify-content-start">
+					<ul class="sidebar-menu__list col-lg-3 offset-lg-2" id="menu-main">
+						<li class="sidebar-menu__list_item active--menu">
+							<a href="#" class="sidebar-menu__list_item-link">Главная</a>
+						</li>
+						<li class="sidebar-menu__list_item">
+							<a href="#" class="sidebar-menu__list_item-link">Услуги</a>
+						</li>
+						<li class="sidebar-menu__list_item">
+							<a href="#" class="sidebar-menu__list_item-link">Новости</a>
+						</li>
+						<li class="sidebar-menu__list_item">
+							<a href="#" class="sidebar-menu__list_item-link">Портфолио</a>
+						</li>
+						<li class="sidebar-menu__list_item">
+							<a href="#" class="sidebar-menu__list_item-link">Контакты</a>
+						</li>
+					</ul>
+
+					<ul class="sidebar-menu__list col-lg-3" id="menu-pavilion">
+						<li class="sidebar-menu__list_item">
+					        <a href="#" class="sidebar-menu__list_item-link">
+					            <div class="sidebar-menu__list_item-ico" id="ico-1"></div>
+					            Торговые павильоны
+					        </a>
+					    </li>
+					    <li class="sidebar-menu__list_item">
+					        <a href="#" class="sidebar-menu__list_item-link">
+					            <div class="sidebar-menu__list_item-ico" id="ico-2"></div>
+					            Садовые домики
+					        </a>
+					    </li>
+					    <li class="sidebar-menu__list_item">
+					        <a href="#" class="sidebar-menu__list_item-link">
+					            <div class="sidebar-menu__list_item-ico" id="ico-3"></div>
+					            Посты охраны
+					        </a>
+					    </li>
+					    <li class="sidebar-menu__list_item">
+					        <a href="#" class="sidebar-menu__list_item-link">
+					        	<div class="sidebar-menu__list_item-ico" id="ico-4"></div>
+					            Каркасные дома               
+					        </a>
+					    </li>
+					</ul>
+				</div>
+			</nav>
+			<div class="menu--copyright d-flex flex-column justify-content-center ">
+				<p class="section-text">Создание сайта</p>
+				<a href="#"><img src="img/web_logo.png" alt="" class="menu__img"></a>
+			</div>
+		</div>
+		<div id="form-menu" class="sidebar menu-close col-12 col-lg-6 offset-lg-6">
+			<div class="menu--container col-lg-6 col-10 offset-1">
+				<div class="menu d-none align-items-center ">
+					<button class="close--menu toggle_form"></button>
+				</div>
+				<div class="sidebar__caption d-flex align-items-center flex-column">
+					<h1 class="sidebar__caption_title">заполните форму ниже</h1>
+					<p class="sidebar__caption_subtitle">и специалист нашей компании свяжется с вами в течение рабочего дня</p>
+				</div>			
+				<nav>
+					<form action="POST" class="sidebar-menu__form d-flex flex-column">
+						<input type="text" placeholder="Введите Ваше имя" class="sidebar-menu__form-field" id="sidebar-menu__form-name">
+						<input type="text" placeholder="Введите Ваш телефон" class="sidebar-menu__form-field" id="sidebar-menu__form-phone">
+						<input type="text" placeholder="Введите Ваш email" class="sidebar-menu__form-field" id="sidebar-menu__form-email">
+						<textarea placeholder="Комментарий" class="sidebar-menu__form-field" id="sidebar-menu__form-comment"></textarea>
+						<input type="submit" value="Отправить заявку" class="button-send"> 
+					</form>
+				</nav>	
+			</div>
+		</div>
+		<div class="menu--overlay col-6"></div>
+	</div>
+   <div id="fullpage">
+	   <section id="start-screen" class="section d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<h1 class="section__title">
+							Изготовление садовых <br>
+							домиков бытовок, <br>
+							мобильных бань <br>
+							и торговых павильонов <br>
+							<strong class="title--selection"> любой сложности</strong>
+						</h1>
+						<div class="features">
+							<ul class="features__list d-flex justify-content-between flex-lg-row flex-column">
+								<li class="features__list_item">
+									<div class="features__list_item-ico" id="features-ico-1"></div>
+									<p class="features__list_item-text"><strong>С разработкой </strong><br>индивидуального дизайна<br> и 3D визуализацией проекта</p>
+								</li>
+								<li class="features__list_item">
+									<div class="features__list_item-ico" id="features-ico-2"></div>
+									<p class="features__list_item-text"><strong>С использованием</strong><br> надежных<br> материалов</p>
+								</li>
+								<li class="features__list_item">
+									<div class="features__list_item-ico" id="features-ico-3"></div>
+									<p class="features__list_item-text"><strong>С доставкой</strong> и монтажом <br>по всему Краснодару<br> и в ближайшие регионы</p>
+								</li>
+							</ul>
+						</div>
+						<button class="button-send toggle_form">Отправить заявку</button>
+					</div>
+				</div>
+			</div>
+	   </section>
+
+	   <section id="about-us">
+	   		<div class="triangle d-flex flex-wrap justify-content-end">	   			
+	   			<div class="container triangle__figure d-flex flex-column justify-content-center col-12 col-lg-8" id="triangle__figure_first">	   				
+	   					<div class="row justify-content-center justify-content-lg-end">
+	   						<div class="triangle__figure_info col-12 d-flex flex-column align-items-center">
+		   						<h1 class="section__title">
+				   					Хотите построить небольшое<br> здание для бытовых или<br> рабочих нужд?
+				   				</h1>
+				   				<p class="section-text">
+				   					Компания <strong class="title--selection">«Мобильные дома» </strong>более 10 лет<br> производит и монтирует модульные конструкции:
+				   				</p>
+				   			</div>
+	   					</div>   				
+	   			</div>
+	   			<div class="container triangle__figure col-12 col-lg-7 triangle__overlay--light" id="triangle__figure_second">
+	   				<div class="row triangle__figure_info">
+	   					<h2 class="triangle__figure_info-title">По индивидуальному дизайну</h2>
+   					</div>
+	   			</div>
+	   			<div class="container triangle__figure col-12 col-lg-4 triangle__overlay--light" id="triangle__figure_third">
+   					<div class="row triangle__figure_info">
+	   					<h2 class="triangle__figure_info-title">С быстрой сборкой на строительной площадке</h2>
+	   				</div>	
+	   			</div>
+	   			<div class="container triangle__figure col-lg-7" id="triangle__figure_fourth">
+	   				<div class="row w-100 triangle__figure_info">
+	   					<div class="triangle__figure_additional triangle__overlay--fiol " id="triangle__figure_additional-1">
+   						<h2 class="triangle__figure_info-title">Из надежных материалов</h2></div>
+	   					<h2 class="triangle__figure_info-title">Полный цикл работ <strong>от идеи, до реализации</strong>
+	   					</h2>
+	   				</div>
+	   			</div>
+	   		</div>
+		</section>
+
+	   
+	   <section id="product" class="product">
+		   	<div class="container">
+		   		<div class="row">
+		   			<h1 class="section__title--center">Какие изделия мы изготавливаем</h1>
+		   		</div>
+		   	</div>
+		   	<div class="container-fluide">
+		   		<div class="row product__list justify-content-center align-items-center no-gutters">
+		   			<div class="product__list_item">
+		   				<img src="img/pavilion_2.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Садовые домики</h3>
+		   			</div>
+		   			<div class="product__list_item" id="product-2">
+		   				<img src="img/pavilion_1.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Садовые домики</h3>
+		   			</div>
+		   			<div class="product__list_item--big" id="product-3">
+		   				<img src="img/home-1.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Торговые павильоны</h3>
+		   			</div>
+		   			<div class="product__list_item" id="product-4">
+		   				<img src="img/pavilion_3.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Торговые павильоны</h3>
+		   			</div>
+		   			<div class="product__list_item--big" id="product-5">
+		   				<img src="img/home-1.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Торговые павильоны</h3>
+		   			</div>
+		   			<div class="product__list_item--big" id="product-6">
+		   				<img src="img/home-1.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Торговые павильоны</h3>
+		   			</div>
+		   			<div class="product__list_item" id="product-7">
+		   				<img src="img/pavilion_3.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Торговые павильоны</h3>
+		   			</div>
+		   			<div class="product__list_item" id="product-8">
+		   				<img src="img/pavilion_2.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Торговые павильоны</h3>
+		   			</div>
+		   			<div class="product__list_item" id="product-9">
+		   				<img src="img/pavilion_1.png" alt="" class="product__list_item-img">
+		   				<h3 class="product__list_item-title">Садовые домики</h3>
+		   			</div>
+		   		</div>
+		   	</div>
+	   </section>
+
+	   <section id="materials">
+	   		<div class="triangle">	   			
+	   			<div class="container triangle__figure d-flex flex-column justify-content-center col-12 col-lg-8" id="triangle__material-1">	   				
+   					<div class="row justify-content-center justify-content-lg-end">
+   						<div class="triangle__figure_info col-12 col-lg-8 d-flex flex-column align-items-center">
+	   						<h1 class="section__title">
+			   					3 главных элемента<br> для надежности и долговечности<br> вашего модульного изделия
+			   				</h1>
+			   			</div>
+   					</div>   				
+	   			</div>
+	   			<div class="container triangle__figure triangle__overlay--light col-12 col-lg-7" id="triangle__material-2">
+	   				<div class="row justify-content-center">
+	   					<div class="triangle__figure_info">
+		   					<h3 class="triangle__figure_info-title">«Зеленый» лес</h3>
+		   					<p class="triangle__figure_info-text">Мы используем пиломатериалы <br>только из «живого» леса. Он крепче <br>сухостоя, не заражен личинками <br>жука-короеда и других вредителей, не <br>нуждается в обработке антисептиком.</p>
+		   				</div>
+					</div>
+	   			</div>
+	   			<div class="container triangle__figure triangle__overlay--light col-12 col-lg-4" id="triangle__material-3">
+					<div class="row justify-content-center">
+						<div class="triangle__figure_info">
+							<h3 class="triangle__figure_info-title">Плитный утеплитель из каменной ваты</h3>
+		   					<p class="triangle__figure_info-text">За счет хаотичного расположения волокон материал <br>имеет воздушную структуру и хорошо заглушает шум.</p>
+		   					<p class="triangle__figure_info-text">Такой утеплитель выступает в качестве преграды на <br>пути открытого огня, имеет повышенную <br>огнестойкость (группа НГ) и экологичность.</p>
+		   				</div>
+					</div>	
+	   			</div>
+	   			<div class="container triangle__figure triangle__overlay--light col-lg-7" id="triangle__material-4">
+	   				<div class="row justify-content-center">
+
+	   					<div class="triangle__figure_info">
+	   					<h3 class="triangle__figure_info-title">Металлический каркас</h3>
+	   					<p class="triangle__figure_info-text">Основа наших зданий — устойчивый к коррозии <br>быстромонтируемый металлический каркас из <br>профильных труб разного сечения, которые <br>выдерживают высокие поперечные нагрузки.</p>
+	   				</div>
+	   				</div>
+	   			</div>
+	   		</div>
+	   </section>
+	   <section id="stages">
+	   		<div class="container">
+	   			<div class="row">
+	   				<h1 class="section__title--center">Как мы сконструируем ваше модульное изделие</h1>
+	   				<div class="stages d-flex flex-column">
+	   					<div class="stages__item d-flex">
+	   						<div class="stages__item_side--left col-lg-8 col-12">
+		   						<h3 class="stages__item_side-title">Разработаем подробный проект с визуализацией</h3>
+		   						<p class="stages__item_side-text">Наши проектировщики создадут виртуальную модель изделия при помощи компьютерных программ и выполнят рабочий проект.Вы сразу увидите, как будет выглядеть ваша постройка после изготовления</p>
+		   					</div>
+		   					<div class="stages__item_side--right col-lg-4 col-12 no-gutters p-0">
+	   							<img src="img/home-1.png" alt="" class="stages__item_side-img">
+	   						</div>
+	   					</div>	  
+	   					<div class="stages__item d-flex">
+	   						<div class="stages__item_side--left col-lg-8 col-12">
+		   						<h3 class="stages__item_side-title">Запустим производство</h3>
+		   						<p class="stages__item_side-text">После передачи проекта в производство мы укомплектуем все необходимые элементы для сборки здания. В зависимости от сложности конструкции, мы начнем монтаж на нашей строительной площадке или перевезем изделие по частям на ваш объект.</p>
+		   					</div>
+		   					<div class="stages__item_side--right col-lg-4 col-12 no-gutters p-0">
+	   							<img src="img/home-2.png" alt="" class="stages__item_side-img">
+	   						</div>
+	   					</div>
+	   					<div class="stages__item d-flex">
+	   						<div class="stages__item_side--left col-lg-8 col-12">
+		   						<h3 class="stages__item_side-title">Установим здание на вашей площадке</h3>
+		   						<p class="stages__item_side-text">Наши специалисты доставят готовую постройку и произведут монтаж.
+В большинстве случаев установка небольших изделий и павильонов занимает несколько часов.</p>
+		   					</div>
+		   					<div class="stages__item_side--right col-lg-4 col-12 no-gutters p-0">
+	   							<img src="img/home-3.png" alt="" class="stages__item_side-img">
+	   						</div>
+	   					</div> 					
+	   				</div>
+	   				<button class="button-send toggle_form">Отправить заявку</button>
+	   			</div>
+	   		</div>
+	   </section>
+
+		<section  id="advantages" class="advantages">
+				<div class="container">
+					<div class="row">
+						<div class="section__title--center col-12">
+							С нами вы можете быть уверены в качестве 
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-12">
+							<ul class="advantages__list">
+								<li class="advantages__list_item">
+									<h4 class="advantages__list_item-title">У нас — собственное производство</h4>
+									<p class="advantages__list_item-text">Наши специалисты с нуля создадут вашу постройку — начиная от разработки эскизов и визуализации, заканчивая сборкой и контролем качества</p>
+								</li>
+								<li class="advantages__list_item">
+									<h4 class="advantages__list_item-title">Предварительно согласуем конструкции<br> и внешний вид объекта </h4>
+									<p class="advantages__list_item-text">Перед началом изготовления вашей постройки мы разработаем 3D-модель и обсудим с вами решение. После монтажа не будет неожиданных сюрпризов.</p>
+								</li>
+								<li class="advantages__list_item">
+									<h4 class="advantages__list_item-title">Даем гарантии</h4>
+									<p class="advantages__list_item-text">На каждую постройку мы дадим вам гарантию на 12 месяцев. На протяжении этого срока наши специалисты отремонтируют ваше изделие при обнаружении дефектов.</p>
+									<p class="advantages__list_item-text">Даже после окончания гарантии вы всегда можете обратиться за нашей помощью.</p>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-6 offset-lg-1 col-12 d-lg-flex flex-lg-column justify-content-lg-center advantages__video">
+							<p class="section-text">Узнайте больше о компании <br>«Мобильные дома» из 2-минутного видео</p>
+							<div id="advantages__video_player" class="advantages__video_player">
+								<video class="advantages__video_player-file" id="why-we__video" poster="img/video_poster.png" ><source src="video/videoplayback.mp4" type="video/mp4">					
+								</video>
+								<div class="advantages__video_player-button" id="advantages__video_player-button"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+
+
+	   <section  id="summary" class="summary">
+			<div class="col-12 summary--background">
+		   	<div class="container">
+		   		<div class="row d-flex flex-column">   			
+	   				<h1 class="section__title">«Мобильные дома» в цифрах</h1>
+					<div class="summary__statistics d-lg-flex flex-lg-row">
+						<div class="summary__statistics_number col-lg-3 col-10">
+							<h2 class="summary__statistics_number-title">>10</h2>
+							<p class="summary__statistics_number-text">
+								<strong class="title--selection">Лет</strong> изготавливаем мобильные дома разного назначения
+							</p>
+						</div>
+
+						<div class="summary__statistics_numbers col-lg-3 col-10">
+							<h2 class="summary__statistics_number-title">>1000</h2>
+							<p class="summary__statistics_number-text">
+								<strong class="title--selection">Объектов</strong> построено нашими специалистами
+							</p>
+						</div>
+
+						<div class="summary__statistics_numbers col-lg-3 col-10">
+							<h2 class="summary__statistics_number-title">>30</h2>
+							<p class="summary__statistics_number-text">
+								<strong class="title--selection">Конструкций</strong> изготавливаем в месяц
+							</p>
+						</div>
+
+						<div class="summary__statistics_numbers col-lg-3 col-10">
+							<h2 class="summary__statistics_number-title">1</h2>
+							<p class="summary__statistics_number-text">
+								<strong class="title--selection">Год </strong> гарантии на всю нашу продукцию
+							</p>
+						</div>
+					</div>
+	   			</div>
+	   		</div>
+		   	</div>
+		   	<div class="container">
+		   		<div class="row col-12">
+					<h1 class="section__title">С кем мы сотрудничаем</h1>
+					<div class="summary__partners d-md-flex flex-md-wrap align-items-md-center justify-content-md-start">
+						<div class="summary__partners_item col-xl-2 col-8 offset-3 offset-md-0 col-md-3">
+							<img src="img/partner_1.png" alt="" class="summary__partners_item-img">
+						</div>
+						<div class="summary__partners_item col-xl-2 col-8 offset-3 offset-md-0 col-md-3"><img src="img/partner_2.png" alt="" class="summary__partners_item-img"></div>
+						<div class="summary__partners_item col-xl-2 col-8 offset-3 offset-md-0 col-md-3"><img src="img/partner_3.png" alt="" class="summary__partners_item-img"></div>
+						<div class="summary__partners_item col-xl-2 col-8 offset-3 offset-md-0 col-md-3"><img src="img/partner_1.png" alt="" class="summary__partners_item-img"></div>
+						<div class="summary__partners_item col-xl-2 col-8 offset-3 offset-md-0 col-md-3"><img src="img/partner_2.png" alt="" class="summary__partners_item-img"></div>
+					</div>
+		   		</div>
+		   	</div>
+	   </section>
+	   <section class="extra-service">
+	   		<div class="container">
+	   			<div class="row">
+	   				<div class="extra-service__credit col-12">
+	   					<div class="extra-service__credit-item col-lg-7 col-12">
+		   					<h1 class="title--selection section__title">Кредит от 3 до 5 лет</h1>
+		   					<p class="section-text">Мы сотрудничаем с банками <strong>«Альфа Банк»</strong>, <strong>«ОТП Банк»</strong> и <strong>«Сетелем Банк»</strong>, поэтому вы можете взять модульные изделия в кредит от 3 до 5 лет.</p>
+		   					<p class="section-text">После проверки на одобряемость кредита и поступления первого взноса мы сразу приступим к изготовлению вашего изделия.</p>
+		   				</div>
+	   				</div>
+	   				<div class="extra-service__delivery col-lg-5 col-12">
+	   					<h1 class="section__title">Доставка</h1>
+	   					<p class="section-text">Наши специалисты доставят ваше модульное изделие в любую точку <strong class="title--selection">Краснодара и в ближайшие регионы.</strong>
+	   					<p class="section-text">Для перевозки, разгрузки и монтажа изделий размером до 3,5 х 10,0м мы используем кран-манипулятор, более крупные постройки перевезем модульными частями к вашему участку.</p>
+	   				</div>
+	   			</div>
+	   		</div>
+	   </section>
+
+	   <section class="order-step">
+		   	<div class="container">
+		   		<div class="row">
+		   			<div class="section__title--center">Как мы будем с вами работать</div>
+		   			<div class="order-step__list d-lg-flex flex-lg-wrap col-xl-10 offset-xl-1">
+		   				<div class="order-step__list_item col-lg-4 col-12">
+		   					<img src="img/step-1.png" alt="" class="order-step__list_item-img">
+		   					<p class="section-text">Вы отправляете заявку<br> на нашем сайте</p>
+		   				</div>
+		   				<div class="order-step__list_item col-lg-4 col-12">
+		   					<img src="img/step-2.png" alt="" class="order-step__list_item-img">
+		   					<p class="section-text">Мы связываемся с вами и просчитываем	стоимость изделия</p>
+		   				</div>
+		   				<div class="order-step__list_item col-lg-4 col-12">
+		   					<img src="img/step-3.png" alt="" class="order-step__list_item-img">
+		   					<p class="section-text">Заключаем договор, составляем<br> техзадание и создаем визуализацию</p>
+		   				</div>
+		   				<div class="order-step__list_item col-lg-4 col-12">
+		   					<img src="img/step-4.png" alt="" class="order-step__list_item-img">
+		   					<p class="section-text">Мы доставляем и монтируем ваш<br> мобильный дом</p>
+		   				</div>
+		   				<div class="order-step__list_item col-lg-4 col-12">
+		   					<img src="img/step-5.png" alt="" class="order-step__list_item-img">
+		   					<p class="section-text">Сдаем объект: вы подписываете акт <br>выполненных работ и вносите<br> оставшуюся часть оплаты</p>
+		   				</div>
+		   				<div class="order-step__list_item col-lg-4 col-12">
+		   					<img src="img/step-6.png" alt="" class="order-step__list_item-img">
+		   					<p class="section-text">Вы вносите 50% предоплаты — мы<br> приступаем к производству и<br> строительству изделия</p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</div>
+	   </section>
+	   <section class="map">
+		   	<div class="container">
+			   	<div class="row">
+			   		<h1 class="section__title--center">Хотите посмотреть на наши мобильные дома?</h1>
+			   		<adress class="map__adress">Приходите к нам по адресу <strong class="title--selection"> г. Краснодар, Ростовское шоссе 25,</strong> и мы покажем вам нашу продукцию в выставочном павильоне:</adress>
+			   	</div>
+				<div class="col-lg-10 offset-lg-1 col-12 modal__container">
+					<div class="offer d-lg-flex">  
+						<div class="offer__side--first col-lg-6 col-12">
+							<h2 class="offer__side_title">Оставьте заявку</h2>
+							<p class="section-text">На изготовление любой мобильной конструкции и получите <strong class="title--selection">БЕСПЛАТНУЮ </strong>компьютерную визуализацию вашего строения при заказе:</p>
+							<div class="tip">
+								<p class="section-text">При заказе более одного изделия — <strong class="title--selection">скидка 5%</strong> на общую сумму
+								</p>
+							</div> 		
+						</div>
+						<div class="offer__side--second col-lg-6 col-12 no-gutters">
+							<form action="" class="offer__form d-flex flex-column justify-content-between">
+								<input type="text" name="name" id="offer__form_name" placeholder="Введите имя" class="offer__form_input">
+								<input type="phone" name="phone" id="offer__form_phone" placeholder="+7 (__) __-__-_" class="offer__form_input">
+								<input type="email" name="email" id="offer__form_email" placeholder="Ваш e-mail" class="offer__form_input">
+								<input type="submit" value="Отправить заявку" class="button-send"> 
+							</form>		
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluide">
+			   	<div class="row no-gutters">
+			   		<div id="map"></div>
+			   	</div>
+			</div>
+			<footer class="footer">
+			   	<div class="container">
+			   		<div class="row align-items-md-center">
+			   			<div class="col-md-4 col-12">
+			   				<div class="footer__side">
+			   					<h2 class="footer__side_title">Адрес</h2>
+			   					<adress class="footer__side_adress">г. Краснодар, Ростовское шоссе 25</adress>   					
+			   				</div>
+			   			</div>
+			   			<div class="col-md-4 offset-md-4 offset-lg-4 col-12">
+							<div class="footer__side">
+								<h2 class="footer__side_title">Контакты</h2>
+								<p class="footer__side_phone">+7 (932) 329-13-65</p>
+								<p class="footer__side_email">mobilehome@gmail.com</p>
+								<div class="footer__side_social d-flex justify-content-left justify-content-lg-start">
+									<a href="" class="footer__side_social-link"><i class="fab fa-facebook"></i></a>
+									<a href="" class="footer__side_social-link"><i class="fab fa-instagram"></i></a>
+									<a href="" class="footer__side_social-link"><i class="fab fa-vk"></i></a>
+								</div>
+							</div>
+						</div>
+			   		</div>
+			   	</div>
+	   		</footer>
+	   </section>
+   </div>
+
+
+
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fullpage.js"></script>
+    <script src="js/fullpage.extensions.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

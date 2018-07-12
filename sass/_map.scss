@@ -1,0 +1,133 @@
+/*Класс контейнера для формы обратной связи, что бы она всегда была сверху других объектов*/
+.modal__container{
+	padding: 0;
+	z-index: 3000;
+
+}
+
+/*Форма обратной связи*/
+.offer{
+  height: 100%;
+  background-color: $light_color_font;
+  box-shadow: 0 0 46px rgba(0, 0, 0, 0.28);
+  padding: rem_size(18);
+  border-radius: 10px;
+  margin-bottom: rem_size(27);
+
+  @media (min-width: $lg) {
+  	margin-bottom: 0;
+  }
+
+  .section-text{
+  	padding: rem_size(7) 0 rem_size(18) 0;
+  	color: #4a4a4a;
+
+  	@media (min-width: $lg) {
+  		max-width: 88%;
+  	}
+  }
+
+  &__side{
+  	&_title{
+  		font-size: rem_size(18);
+  		font-weight: 600;
+  		margin: 0;
+
+  		@media (min-width: $lg) {
+  			font-size: rem_size(13);
+  		}
+  	}
+  }
+
+  &__form{
+  	height: 100%;
+
+  	&_input{
+		border: none;
+		border-bottom: 1px solid;
+		border-bottom-color: #d6d6d6;
+		padding: rem_size(6) 0;
+
+		@media (min-width: $lg) {
+			padding: 0;
+		}
+
+		
+		&:focus{
+			outline: none;
+		}
+  	}
+
+	.button-send{
+		margin-top: rem_size(18);
+		@media (min-width: $lg) {
+			margin-left: 0;
+		}
+	}
+  }
+}
+
+/*Лейбл с текстом о скидке, или в треугольном блоке*/
+.tip{
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	background-color: $tip_color_bg;
+	padding: rem_size(10);
+	position: relative;
+	text-align: left;
+	width: 100%;
+	margin-bottom: rem_size(9);
+
+	@media (min-width: $lg) {
+		  width: 80%;
+		  margin-bottom: 0;
+	}
+
+	.section-text{
+		padding: 0;
+		font-weight: 500;
+	}
+}
+
+.map{
+	position: relative;
+	padding-bottom: 0;
+
+	.section__title--center,.section__title{
+		margin: 0 auto;
+	}
+
+	.offer{
+		margin-top: 14%;
+
+		@media (min-width: $xl) {
+		    margin-top: 20%;
+		}
+
+		@media (min-width: $xxl) {
+		    margin-top: 40%;
+		}
+	}
+
+	&__adress{
+		text-align: center;
+		padding: 0 rem_size(4);
+		font-size: rem_size(10);
+		margin: 0 auto;
+	}
+
+	#map{
+		width: 100%;
+		height: 35vh;
+		z-index: 1;
+
+		@media (min-width: $lg) {
+		    position: absolute;
+		    height: 35%;
+		    top: 20%;
+		}
+
+		@media (min-width: $xl) {
+		    height: 40%;
+		}
+	}
+}

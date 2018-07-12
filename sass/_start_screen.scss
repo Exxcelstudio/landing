@@ -1,0 +1,54 @@
+#start-screen {
+  background-image: url(../img/first_bg.png);
+  @media (min-width: $lg) {
+	padding-bottom: 0;
+    @include background_set(contain, right);
+	/*Тут дополнительно заисал свойство repeat, т.к. оно нужно только для этого блока
+	а как переписать функцию так, что бы можно было передавать туда необязательный аргумент, я не умею.
+	*/
+	background-repeat: repeat-x;
+  }
+
+  .section__title{
+  	padding-top: 4vh;
+  }
+}
+
+.features{
+	  &__list{
+		list-style: none;
+		padding: rem_size(40) 0 rem_size(15) 0;
+
+		@media (min-width: $xxl) {
+			padding: rem_size(70) 0 rem_size(65) 0;
+		}
+
+		&_item{
+		  display: -webkit-flex;
+		  display: -moz-flex;
+		  display: -ms-flex;
+		  display: -o-flex;
+		  display: flex;
+		  flex-direction: column;
+		  margin-bottom: rem_size(18);
+
+		  &-ico{
+			width: 70px;
+			height: 50px;
+			background-image: url(../img/features_sprite.png);
+			@include background_set(cover, unset);
+		  }
+
+		  &-text{
+		  	margin-top: rem_size(9);
+		  }
+
+		  #features-ico-2{
+		  	background-position: -60px;
+		  }
+		  #features-ico-3{
+		  	background-position: -130px;
+		  }	  		  
+		}
+	  }
+}

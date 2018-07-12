@@ -1,0 +1,210 @@
+/*Стартовый размер шрифта в мобильной версии*/
+$base_rem: 9;
+
+/*Размеры экранов*/
+$lg: 1100px;
+$xl: 1300px;
+$xxl: 1700px;
+
+/*colors*/
+$light_color_bg: #fff;
+$light_color_font: #fff;
+
+$red_color_bg: #c42610;
+$red_color_font: #c42610;
+
+$dark_color_font: #000;
+
+$tip_color_bg: #f7e8cb;
+
+/*Миксины*/
+/*Указатель у пункта меню, когда наведена мышка*/
+@mixin menu_select() {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 2px;
+	background: $red_color_font;
+	top: 50%;
+	left: -30%;
+}
+
+/*Наложение цвета на треугольный блок*/
+@mixin triangle_overlay($color,$opacity) {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba($color,$opacity);
+}
+
+/*Распологаем фоновую картинку*/
+@mixin background_set($size,$position){
+  -webkit-background-size: $size;
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: $position;
+}
+
+@mixin img_set($size,$position){
+  object-fit: $size;
+  object-position: $position;
+  width: 100%;
+  height: 100%;
+}
+
+/*Функции*/
+@function set_html_size($rem) {
+    @return $rem+px;
+}
+
+@function rem_size($pxsize) {
+    @return ($pxsize/$base_rem)+rem;
+}
+
+
+/*Стили для тегов*/
+html{
+	font-size: set_html_size($base_rem);
+
+	@media (min-width: $lg) { 
+		$base_rem: 12;
+		font-size: set_html_size($base_rem);
+	}
+}
+body {
+  font-size: rem_size(12);
+  color: $dark_color_font;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+button{
+  font-size: rem_size(12);
+  color: $dark_color_font;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+  font-size: rem_size(12);
+
+  @media (min-width: $lg) { 
+    font-size: rem_size(11);
+  }
+
+  + p{
+    margin-top: rem_size(9);
+  }
+}
+
+section{
+  padding-bottom: rem_size(50);
+  @include background_set(cover,center);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $lg) { 
+    height: 100vh;
+  }
+}
+
+/*Функциональные стили*/
+
+
+/*Вешается на все кнопки, которые должны открывать/закрывать меню/форму*/
+.toggle_menu,.toggle_form{
+  cursor: pointer;
+}
+
+/*Заезжает меню в бок*/
+.menu--close {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+/*Меню выезжает*/
+.menu--open{
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+/*Поднимаем меню поверх всех жругих элементов*/
+.menu--over {
+  z-index: 99999;
+}
+
+
+/*Класс для кнопок Отправить*/
+.button-send {
+  color: $light_color_font;
+  margin: 0 auto;
+  padding: rem_size(12) rem_size(27);
+  border-radius: 50px;
+  background-color: $red_color_bg;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.29);
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $lg) {
+    font-size: rem_size(16);
+  }
+}
+
+/*Включается, когда открывается модальное окно или меню*/
+.block-scroll {
+  overflow: hidden;
+}
+
+/*Класс заголовка секции*/
+.section{
+  &__title {
+    font-size: 4vh;
+    @media (min-width: $xxl) {
+      font-size: 5vh;
+    }
+  /*Класс заголовка секции, по центру и с отступами*/
+    &--center{
+      font-size: rem_size(20);
+      text-align: center;
+      margin: 2rem auto;
+      text-align: center;
+    }
+  }
+}
+
+/*Текст выделенный рыжим цветом*/
+.title--selection {
+  color: $red_color_font;
+  font-weight: bold;
+}
+
+/*Хэдер и меню*/
+@import "_header.scss";
+/*Первый экран*/
+@import "_start_screen.scss";
+/*Второй экран. Треугольные блоки*/
+@import "_triangle_section.scss";
+/*Третий экран. ЧТо мы производим*/
+@import "_products.scss";
+/*Четвертый экран. Шаги*/
+@import "_stages.scss";
+/*Пятый экран. Преимущества*/
+@import "_advantages.scss";
+/*Шестой экран. Резюме о компании*/
+@import "_summary.scss";
+/*Седьмой экран. Кредит и доставка*/
+@import "_extra_service.scss";
+/*Восьмой экран. Шаги для заказа*/
+@import "_order_step.scss";
+/*Девятый экран. Карта и форма обратной связи*/
+@import "_map.scss";
+/*Десятый экран. Футер*/
+@import "_footer.scss";

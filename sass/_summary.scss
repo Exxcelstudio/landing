@@ -1,0 +1,43 @@
+.summary{
+
+	@media (min-width: $lg) {
+		justify-content: flex-start;
+	}
+
+	&--background{
+	  background-image: url(../img/about-company_bg.jpg);
+	  -webkit-background-size: cover;
+	  background-size: cover;
+	  background-position: center;
+	  padding: rem_size(45) 0;	
+	  flex-basis: 50%;
+	  margin-bottom: rem_size(27);
+	}
+	&__statistics{
+	  	padding-top: rem_size(9);
+
+	  &_number{
+	  	&-title{
+		  font-size: 80px;
+		  font-weight: 400;
+	  	}
+
+	  	&-text{
+	  		max-width: 83%;
+	  	}
+	  }
+	}
+
+	&__partners{
+		margin-top: rem_size(36);
+		&_item{
+			@media (min-width: $lg) {
+			    margin-right: rem_size(27);
+			}
+
+			&-img{
+				width: 100%;
+			}
+		}
+	}
+}
